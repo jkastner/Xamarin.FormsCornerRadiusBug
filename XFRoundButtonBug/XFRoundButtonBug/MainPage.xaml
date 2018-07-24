@@ -11,18 +11,28 @@
             Text="Button Hardcoded to 5"></Label>
         <Button 
             Margin="5"
+            BackgroundColor="Green"
             WidthRequest="50"
             HeightRequest="50"
             CornerRadius="5"
-            ></Button>
-        <Entry Text="{Binding TheButtonCornerRadius}"></Entry>
-        <Label Text="The corner radius here is bound to the value entered above. Setting it to '5', the same as the hardcoded value above, will cause it to crash. Setting it to either 4 or 6 will not crash. "></Label>
+        ></Button>
+        <StackLayout>
+            <Label Text="Bound Corner Radius"></Label>
+            <Entry Text="{Binding TheButtonCornerRadius}"></Entry>
+        </StackLayout>
+        <Label>
+            <Label.Text>
+                For this next button, the corner radius is bound to the value entered above. 
+                Setting it to '5', which is the hardcoded value of the green button above, will cause a crash.
+                Setting it to either 4 or 6 will not crash.
+            </Label.Text>
+        </Label>
         <Button 
             Margin="5"
             WidthRequest="50"
             HeightRequest="50"
             CornerRadius="{Binding TheButtonCornerRadius}"
-            ></Button>
+        ></Button>
     </StackLayout>
 
 </ContentPage>
